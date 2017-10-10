@@ -3,7 +3,7 @@ import React from 'react'
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Link, HashRouter, Switch  } from 'react-router-dom';
 
-// import html
+// import starting html
 require('./../index.html');
 
 // import vendors

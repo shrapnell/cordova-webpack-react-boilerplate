@@ -4,7 +4,7 @@ module.exports = {
   entry: './src/js/App.jsx',
   output: {
     filename: 'index.js',
-    path: path.resolve(__dirname, 'build')
+    path: path.resolve(__dirname, 'www')
   },
   module: {
     rules: [
@@ -120,7 +120,7 @@ module.exports = {
   },
   watch: false,
   devServer: {
-    contentBase: path.join(__dirname, "build"),
+    contentBase: path.join(__dirname, 'www'),
     compress: true,
     port: 8080,
     headers: {
