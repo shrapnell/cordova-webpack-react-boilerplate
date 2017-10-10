@@ -8,15 +8,15 @@ git clone https://github.com/shrapnell/cordova-webpack-react-boilerplate.git
 ```sh
 npm install -g cordova
 ```
-3. webpack-dev-server installieren 
-```sh
-npm install -g webpack-dev-server
-```
-4. Pakete installieren
+3. Pakete installieren
 ```sh
 npm start
 ```
-5. Umgebung starten
+4. Server starten
 ```sh
 npm run dev
+```
+5. Browser öffnen
+```sh
+http://localhost:8080
 ```
