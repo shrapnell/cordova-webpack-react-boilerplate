@@ -3,6 +3,9 @@ import React from 'react'
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Link, HashRouter, Switch  } from 'react-router-dom';
 
+// import html
+require('./../index.html');
+
 // import vendors
 require('font-awesome-webpack');
 

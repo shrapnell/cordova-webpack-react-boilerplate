@@ -1,10 +1,10 @@
 var path = require('path');
 
 module.exports = {
-  entry: './www/js/App.jsx',
+  entry: './src/js/App.jsx',
   output: {
     filename: 'index.js',
-    path: path.resolve(__dirname, 'www')
+    path: path.resolve(__dirname, 'build')
   },
   module: {
     rules: [
@@ -97,8 +97,13 @@ module.exports = {
       },
       // bilder laden
       {
-        test: /\.(jpg|png|gif)$/,
-        use: 'file-loader'
+        test: /\.(jpg|png|gif|html)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]'
+          }
+        }
       },
       // schriften laden
       {
@@ -106,7 +111,8 @@ module.exports = {
         use: {
           loader: 'url-loader',
           options: {
-            limit: 100000
+            limit: 100000,
+            name: '[name].[ext]'
           }
         }
       }
@@ -114,7 +120,7 @@ module.exports = {
   },
   watch: false,
   devServer: {
-    contentBase: path.join(__dirname, "www"),
+    contentBase: path.join(__dirname, "build"),
     compress: true,
     port: 8080,
     headers: {
