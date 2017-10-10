@@ -5,10 +5,11 @@ import { BrowserRouter as Router, Route, Link, HashRouter, Switch  } from 'react
 
 // import vendors
 require('font-awesome-webpack');
-require('bootstrap');
+
 import Raleway from './../scss/Raleway.scss';
 import Style   from './../scss/app.global.scss';
-$ = require('jQuery');
+global.jQuery = require('jquery');
+require('bootstrap');
 
 import Home from './Pages/Home.jsx';
 
